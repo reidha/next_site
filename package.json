@@ -1,0 +1,27 @@
+{
+  "name": "next_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reidha/next_site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reidha/next_site/issues"
+  },
+  "homepage": "https://github.com/reidha/next_site#readme",
+  "dependencies": {
+    "next": "^9.3.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}
