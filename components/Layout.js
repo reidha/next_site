@@ -11,6 +11,12 @@ export default function Layout(props) {
             <Menu />
             {props.children}
             <Footer/>
+            
+            <style jsx global >{`
+                body {
+                    font-family: 'Roboto'
+                }  
+            `}</style>
         </>
     )
 }

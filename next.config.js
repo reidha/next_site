@@ -1,6 +1,7 @@
 module.exports = {
     exportTrailingSlash: true,
     exportPathMap: () => ({
-        '/': {page: '/'}
+        '/': {page: '/'},
+        '/apps/todo': {page: '/apps/todo'}
     })
 };
