@@ -6,7 +6,7 @@ export default function Menu() {
             <Link href="/">
                 <a>Home</a>
             </Link>
-            <Link href="/apps/todo">
+            <Link href="/apps/todo/">
                 <a>App: TODO</a>
             </Link>
         </>
