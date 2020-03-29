@@ -4,10 +4,10 @@ export default function Menu() {
     return (
         <>
             <Link href="/">
-                <a>Home</a>
+                <img src="/static/logo-small.png" alt="logo" height="48"/>
             </Link>
-            <Link href="/apps/todo/">
-                <a>App: TODO</a>
+            <Link href="/products/todo/">
+                <a>[Android] ToDo</a>
             </Link>
         </>
     )
