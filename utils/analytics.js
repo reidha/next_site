@@ -1,6 +1,6 @@
 import ReactGA from 'react-ga';
 
-import { gaTrackingId } from '../components/Constant';
+import { gaTrackingId } from './constant';
 
 export const initGA = () => {
     console.log('GA init')
