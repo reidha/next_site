@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { title } from './Constant';
+import { title } from '../utils/constant';
 
 export default function Header() {
     return (

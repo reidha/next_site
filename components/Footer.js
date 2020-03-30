@@ -1,4 +1,4 @@
-import { title, url } from './Constant';
+import { title, url } from '../utils/constant';
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share';
 
 export default function Footer() {
