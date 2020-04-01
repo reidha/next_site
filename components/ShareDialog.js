@@ -2,7 +2,7 @@ import { title, url } from '../utils/constant';
 
 import { Button, Dialog, DialogTitle, DialogContent, Divider, DialogActions } from '@material-ui/core';
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 

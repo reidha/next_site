@@ -1,20 +1,18 @@
 import Head from './Header';
 import { BodyTop } from './BodyCommon';
-import Menu from './Menu';
+import ResponsiveDrawer from './ResponsiveDrawer';
 import Footer from './Footer';
 import { initGA, logPageView } from '../utils/analytics';
 
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
-import { red } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
     palette: {
-        type: 'dark',
-        primary: red
+        type: 'light'
     }
 });
 
-export default class Layout extends React.Component {
+class Layout extends React.Component {
     componentDidMount() {
         if (!window.GA_INITIALIZED) {
             initGA();
@@ -29,8 +27,9 @@ export default class Layout extends React.Component {
                 <MuiThemeProvider theme={theme}>
                     <Head />
                     <BodyTop />
-                    <Menu />
-                    {this.props.children}
+                    <ResponsiveDrawer>
+                        {this.props.children}
+                    </ResponsiveDrawer>
                     <Footer />
 
                     <style jsx global >{`
@@ -43,3 +42,5 @@ export default class Layout extends React.Component {
         )
     }
 }
+
+export default Layout;
