@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { title } from './Constant';
+import { title } from '../utils/constant';
 
 export default function Header() {
     return (
         <Head>
             <title key="title">{title}</title>
-            <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.png" />
+            <link rel="shortcut icon" type="image/x-icon" href="/favicon/favicon.png" />
 
             <meta name="description" content="Plan to show all my works."/>
 
