@@ -56,7 +56,6 @@ const useStyles = makeStyles(theme =>
 );
 
 export default function ResponsiveDrawer(props) {
-    console.log('Menu');
     const classes = useStyles();
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
