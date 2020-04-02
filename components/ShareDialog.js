@@ -1,9 +1,10 @@
 import { title, url } from '../utils/constant';
+import SnackbarAlert from './SnackbarAlert';
 
+import React from 'react';
 import { Button, Dialog, DialogTitle, DialogContent, Divider, DialogActions } from '@material-ui/core';
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const useStyles = makeStyles(theme => 
@@ -17,9 +18,16 @@ const useStyles = makeStyles(theme =>
 );
 
 export default function ShareDialog(props) {
-    console.log('ShareDialog');
     const classes = useStyles(props);
-    console.log(classes);
+
+    const [isSnackbarAlertOpen, setIsSnackbarAlertOpen] = React.useState(false);
+    const openSnackbarAlert = () => {
+        setIsSnackbarAlertOpen(true);
+    };
+    const closeSnackbarAlert = (event, reason) => {
+        setIsSnackbarAlertOpen(false);
+    };
+
     return (
         <>
             <Dialog
@@ -38,7 +46,7 @@ export default function ShareDialog(props) {
                 <Divider />
                 <DialogContent className={classes.shareIconArea}>
                     <CopyToClipboard text={url}>
-                        <Button color="primary">Copy URL</Button>
+                        <Button color="primary" onClick={openSnackbarAlert}>Copy URL</Button>
                     </CopyToClipboard>
                 </DialogContent>
                 <Divider />
@@ -47,6 +55,13 @@ export default function ShareDialog(props) {
                         Close
                     </Button>
                 </DialogActions>
+                <SnackbarAlert 
+                    open={isSnackbarAlertOpen} 
+                    autoHideDuration={5000}
+                    onClose={closeSnackbarAlert} 
+                    severity="success">
+                    Copied to Clipboard! 
+                </SnackbarAlert>
             </Dialog>
         </>
     )
