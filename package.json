@@ -7,7 +7,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export -o reidha.github.io"
+    "export": "next export -o reidha.github.io",
+    "lint": "eslint --fix",
+    "lintall": "eslint --fix components/ pages/ utils/"
   },
   "repository": {
     "type": "git",
@@ -31,5 +33,8 @@
     "react-ga": "^2.7.0",
     "react-share": "^4.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0"
+  }
 }

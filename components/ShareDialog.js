@@ -6,8 +6,9 @@ import { Button, Dialog, DialogTitle, DialogContent, Divider, DialogActions } fr
 import { FacebookShareButton, FacebookIcon, TwitterShareButton, TwitterIcon } from 'react-share';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import PropTypes from 'prop-types';
 
-const useStyles = makeStyles(theme => 
+const useStyles = makeStyles(() => 
     createStyles({
         shareIconArea: {
             padding: 10,
@@ -24,7 +25,7 @@ export default function ShareDialog(props) {
     const openSnackbarAlert = () => {
         setIsSnackbarAlertOpen(true);
     };
-    const closeSnackbarAlert = (event, reason) => {
+    const closeSnackbarAlert = () => { // possible arguments: event, reason
         setIsSnackbarAlertOpen(false);
     };
 
@@ -65,4 +66,9 @@ export default function ShareDialog(props) {
             </Dialog>
         </>
     )
+}
+
+ShareDialog.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired
 }

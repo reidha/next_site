@@ -8,6 +8,7 @@ import {
     Divider, List, ListItem, ListItemText,
     Toolbar, AppBar, IconButton, Hidden, Drawer
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
 import ResponsiveDrawerListItem from './ResponsiveDrawerListItem';
 import { drawerWidth, headerNavigationHeight } from '../utils/constant';
@@ -156,4 +157,8 @@ export default function ResponsiveDrawer(props) {
             </main>
         </div>
     )
+}
+
+ResponsiveDrawer.propTypes = {
+    children: PropTypes.node.isRequired
 }

@@ -4,7 +4,9 @@ import ResponsiveDrawer from './ResponsiveDrawer';
 import Footer from './Footer';
 import { initGA, logPageView } from '../utils/analytics';
 
-class Layout extends React.Component {
+import PropTypes from 'prop-types';
+
+export default class Layout extends React.Component {
     componentDidMount() {
         if (!window.GA_INITIALIZED) {
             initGA();
@@ -27,4 +29,6 @@ class Layout extends React.Component {
     }
 }
 
-export default Layout;
+Layout.propTypes = {
+    children: PropTypes.node.isRequired
+}

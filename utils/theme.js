@@ -5,7 +5,7 @@ export const theme = createMuiTheme({
         type: 'light'
     },
     typography: {
-        fontFamily: "Roboto",
+        fontFamily: 'Roboto',
         h4: {
             lineHeight: '1.5'
         },

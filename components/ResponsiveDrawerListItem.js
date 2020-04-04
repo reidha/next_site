@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import {
-    List, ListItem, ListItemIcon, ListItemText
-} from '@material-ui/core';
+import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 
 export default function ResponsiveDrawerListItem({href, icon, text}) {
     return(
@@ -13,7 +11,7 @@ export default function ResponsiveDrawerListItem({href, icon, text}) {
             </ListItem>
         </Link>
     );
-};
+}
 
 ResponsiveDrawerListItem.propTypes = {
     href: PropTypes.string.isRequired,

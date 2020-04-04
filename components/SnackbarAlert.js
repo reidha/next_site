@@ -1,5 +1,6 @@
-import { Snackbar, makeStyles } from '@material-ui/core';
+import { Snackbar } from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
+import PropTypes from 'prop-types';
 
 export default function SnackbarAlert({ open, autoHideDuration, onClose, severity, children }) {
     return (
@@ -11,4 +12,12 @@ export default function SnackbarAlert({ open, autoHideDuration, onClose, severit
             </Snackbar>
         </>
     )
+}
+
+SnackbarAlert.propTypes = {
+    open: PropTypes.bool.isRequired,
+    autoHideDuration: PropTypes.number.isRequired,
+    onClose: PropTypes.func.isRequired,
+    severity: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
 }

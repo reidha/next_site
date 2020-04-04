@@ -2,9 +2,9 @@ import Layout from '../components/Layout';
 import { urlGithubReidha, urlGithubNextSite, urlNoteKkd } from '../utils/constant';
 
 import { Paper, Typography, Divider } from '@material-ui/core';
-import { makeStyles, createStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(theme => 
+const useStyles = makeStyles(() => 
     createStyles({
         center: {
             textAlign: 'center'
@@ -25,7 +25,6 @@ const useStyles = makeStyles(theme =>
 
 export default function About(props) {
     const classes = useStyles(props);
-    const theme = useTheme();
 
     return (
         <Layout>
@@ -69,13 +68,13 @@ export default function About(props) {
                 <Divider className={classes.divider}/>
                 <Typography variant="body1" component="div">
                     <p>
-                        <a href={urlGithubReidha} target="_blank">
+                        <a href={urlGithubReidha} target="_blank" rel="noopener noreferrer">
                             <img src="/image/github-logo.png" alt="Github Logo" height="28" className={classes.logoLink} />
                             <span className={classes.logoLink}>Github: Reidha</span>
                         </a>
                     </p>
                     <p>
-                        <a href={urlNoteKkd} target="_blank">
+                        <a href={urlNoteKkd} target="_blank" rel="noopener noreferrer">
                             <img src="/image/note-logo.svg" alt="Note Logo" height="28" className={classes.logoLink} />
                             <span className={classes.logoLink}>Note: kkd (Japanese)</span>
                         </a>
@@ -84,4 +83,4 @@ export default function About(props) {
             </Paper>
         </Layout>
     );
-};
+}
