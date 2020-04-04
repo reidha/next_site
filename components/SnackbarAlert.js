@@ -5,7 +5,7 @@ export default function SnackbarAlert({ open, autoHideDuration, onClose, severit
     return (
         <>
             <Snackbar open={open} autoHideDuration={autoHideDuration} onClose={onClose}>
-                <Alert onClose={onClose} severity={severity} variant="filled" elevation={6}>
+                <Alert severity={severity} variant="filled" elevation={10}>
                     {children}
                 </Alert>
             </Snackbar>

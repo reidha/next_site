@@ -88,7 +88,7 @@ export default function ResponsiveDrawer(props) {
             </List>
             <Divider />
             <List>
-                <ListItem button>
+                <ListItem>
                     <ListItemText primary="Android app" />
                 </ListItem>
                 <ResponsiveDrawerListItem
