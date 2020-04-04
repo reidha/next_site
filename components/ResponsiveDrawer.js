@@ -5,13 +5,13 @@ import { Share as ShareIcon, Menu as MenuIcon,
 import ShareDialog from './ShareDialog';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import {
-    Divider, List, CssBaseline, ListItem, ListItemText, Typography,
+    Divider, List, ListItem, ListItemText,
     Toolbar, AppBar, IconButton, Hidden, Drawer
 } from '@material-ui/core';
-import ResponsiveDrawerListItem from './ResponsiveDrawerListItem';
 
-const drawerWidth = 240;
-const headerNavigationHeight = 56;
+import ResponsiveDrawerListItem from './ResponsiveDrawerListItem';
+import { drawerWidth, headerNavigationHeight } from '../utils/constant';
+
 
 const useStyles = makeStyles(theme =>
     createStyles({
@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme =>
         drawer: {
             [theme.breakpoints.up('sm')]: {
                 width: drawerWidth,
-                fiexShrink: 0
+                flexShrink: 0
             }
         },
         appBar: {
@@ -50,7 +50,8 @@ const useStyles = makeStyles(theme =>
         content: {
             flexGrow: 1,
             backgroundColor: theme.palette.background.default,
-            padding: theme.spacing(3)
+            padding: theme.spacing(2),
+            flexShrink: 1
         }
     })
 );
@@ -108,7 +109,6 @@ export default function ResponsiveDrawer(props) {
 
     return (
         <div className={classes.root}>
-            <CssBaseline />
             <AppBar className={classes.appBar} position="fixed">
                 <Toolbar className={classes.toolBar} varient="dense">
                     <IconButton

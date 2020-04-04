@@ -3,11 +3,9 @@ import ReactGA from 'react-ga';
 import { gaTrackingId } from './constant';
 
 export const initGA = () => {
-    console.log('GA init')
     ReactGA.initialize(gaTrackingId)
   }
   export const logPageView = () => {
-    console.log(`Logging pageview for ${window.location.pathname}`)
     ReactGA.set({ page: window.location.pathname })
     ReactGA.pageview(window.location.pathname)
   }
