@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 jobs:
   deploy:
@@ -37,7 +34,7 @@ jobs:
         run: |
           echo "$AM_SECRET" > ~/deploy_key.pem
           chmod 600 ~/deploy_key.pem
-          
+
       - name: Git tasks
         env: 
           GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
