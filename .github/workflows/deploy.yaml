@@ -14,7 +14,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-        run: |
+      - run: |
           git log --oneline -10
           npm run build
           npm run export
