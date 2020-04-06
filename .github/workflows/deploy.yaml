@@ -1,0 +1,49 @@
+name: reidha.github.io
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy to reidha.github.io
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+      - name: Set up Node  
+        uses: actions/setup-node@v1
+        with:
+          node_version: '12.x'
+
+      - name: Log
+        run: |
+          git log --oneline -10
+
+      - name: Next tasks
+        run: |
+          npm install
+          npm run build
+          npm run export
+
+      - name: Prepare key
+        env: 
+          AM_SECRET: ${{ secrets.AM_SECRET }}
+        run: |
+          echo "$AM_SECRET" > ~/deploy_key.pem
+          chmod 600 ~/deploy_key.pem
+
+      - name: Git tasks
+        env: 
+          GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
+        run: |
+          cd reidha.github.io
+          git init
+          git remote add origin git@github.com:reidha/reidha.github.io.git
+          git config user.name "reidha"
+          git config user.email "kdaimon.8@gmail.com"
+          git add -A
+          git commit -m auto
+          git push -f origin master
