@@ -14,8 +14,12 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node_version: '12.x'
       - run: |
           git log --oneline -10
+          npm install
           npm run build
           npm run export
           cd reidha.github.io
