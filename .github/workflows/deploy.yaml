@@ -18,10 +18,6 @@ jobs:
         with:
           node_version: '12.x'
 
-      - name: Log
-        run: |
-          git log --oneline -10
-
       - name: Next tasks
         run: |
           npm install
