@@ -33,7 +33,7 @@ export default function About(props) {
                 <Typography variant="h5">About this site</Typography>
                 <Divider className={classes.divider}/>
                 <Typography variant="body1" component="div">
-                    This site is made to practice React + Next.js and to showcase my personal projects. 
+                    This site is made by React + Next.js and showcases my personal projects. 
                     Github repository of this site is <a href={urlGithubNextSite}>here</a>.
                 </Typography>
             </Paper>
@@ -42,22 +42,23 @@ export default function About(props) {
                 <Divider className={classes.divider}/>
                 <Typography variant="body1" component="div">
                     <ul>
+                        <li>Work
+                            <ul>
+                                <li>Product Manager with CSO&CSPO in Bangkok, Thailand</li>
+                            </ul>
+                        </li>
                         <li>Study
                             <ul>
                                 <li>Master of Information Science, Nagoya University, Japan</li>
                             </ul>
                         </li>
-                        <li>Work
-                            <ul>
-                                <li>Product/project manager in Thailand, Bangkok</li>
-                            </ul>
-                        </li>
                         <li>Programming skills  
                             <ul>
                                 <li>Python (For data science)</li>
-                                <li>C++ (Library: libevent</li>
                                 <li>JavaScript (Framework: React, Node)</li>
                                 <li>Flutter</li>
+                                <li>Java</li>
+                                <li>C++</li>
                             </ul>
                         </li>
                     </ul>
@@ -76,7 +77,7 @@ export default function About(props) {
                     <p>
                         <a href={urlNoteKkd} target="_blank" rel="noopener noreferrer">
                             <img src="/image/note-logo.svg" alt="Note Logo" height="28" className={classes.logoLink} />
-                            <span className={classes.logoLink}>Note: kkd (Japanese)</span>
+                            <span className={classes.logoLink}>Note: kkd (Japanese website)</span>
                         </a>
                     </p>
                 </Typography>
