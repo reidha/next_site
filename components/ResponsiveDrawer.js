@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { Share as ShareIcon, Menu as MenuIcon,
-    EventNote as EventNoteIcon, InfoOutlined as InfoOutlinedIcon } from '@material-ui/icons';
+import {
+    Share as ShareIcon, Menu as MenuIcon, InfoOutlined as InfoOutlinedIcon
+} from '@material-ui/icons';
 import ShareDialog from './ShareDialog';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 import {
@@ -95,12 +96,12 @@ export default function ResponsiveDrawer(props) {
                 </ListItem>
                 <ResponsiveDrawerListItem
                     href="/products/todo/"
-                    icon={<EventNoteIcon />}
+                    icon={<img src="/image/todo-logo.png" alt="todo logo" height="24" />}
                     text="TODO" />
             </List>
             <Divider />
             <List>
-            <ResponsiveDrawerListItem
+                <ResponsiveDrawerListItem
                     href="/about/"
                     icon={<InfoOutlinedIcon />}
                     text="About" />
@@ -122,9 +123,9 @@ export default function ResponsiveDrawer(props) {
                     <Link href="/">
                         <img src="/logo/logo-256.png" alt="logo" height="48" />
                     </Link>
-                    <ShareIcon 
-                        onClick={handleShareDialogOpen} 
-                        className={classes.shareIcon}/>
+                    <ShareIcon
+                        onClick={handleShareDialogOpen}
+                        className={classes.shareIcon} />
                     <ShareDialog
                         open={isShareDialogOpen}
                         onClose={handleShareDialogClose} />

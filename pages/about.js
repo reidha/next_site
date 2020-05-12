@@ -4,7 +4,7 @@ import { urlGithubReidha, urlGithubNextSite, urlNoteKkd } from '../utils/constan
 import { Paper, Typography, Divider } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles(() => 
+const useStyles = makeStyles(() =>
     createStyles({
         center: {
             textAlign: 'center'
@@ -31,15 +31,15 @@ export default function About(props) {
             <Typography variant="h4" className={classes.center}>About</Typography>
             <Paper className={classes.paperContainer}>
                 <Typography variant="h5">About this site</Typography>
-                <Divider className={classes.divider}/>
+                <Divider className={classes.divider} />
                 <Typography variant="body1" component="div">
-                    This site is made by React + Next.js and showcases my personal projects. 
+                    This site is made by React + Next.js and showcases my personal projects.
                     Github repository of this site is <a href={urlGithubNextSite}>here</a>.
                 </Typography>
             </Paper>
             <Paper className={classes.paperContainer}>
                 <Typography variant="h5">About me</Typography>
-                <Divider className={classes.divider}/>
+                <Divider className={classes.divider} />
                 <Typography variant="body1" component="div">
                     <ul>
                         <li>Work
@@ -52,10 +52,10 @@ export default function About(props) {
                                 <li>Master of Information Science, Nagoya University, Japan</li>
                             </ul>
                         </li>
-                        <li>Programming skills  
+                        <li>Programming skills
                             <ul>
-                                <li>Python (For data science)</li>
-                                <li>JavaScript (Framework: React, Node)</li>
+                                <li>Python</li>
+                                <li>JavaScript</li>
                                 <li>Flutter</li>
                                 <li>Java</li>
                                 <li>C++</li>
@@ -66,7 +66,7 @@ export default function About(props) {
             </Paper>
             <Paper className={classes.paperContainer}>
                 <Typography variant="h5">Links</Typography>
-                <Divider className={classes.divider}/>
+                <Divider className={classes.divider} />
                 <Typography variant="body1" component="div">
                     <p>
                         <a href={urlGithubReidha} target="_blank" rel="noopener noreferrer">
