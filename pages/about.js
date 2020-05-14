@@ -6,9 +6,6 @@ import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() =>
     createStyles({
-        center: {
-            textAlign: 'center'
-        },
         paperContainer: {
             margin: '10px 5px 30px 5px',
             padding: '5px 10px 10px 10px'
@@ -28,7 +25,6 @@ export default function About(props) {
 
     return (
         <Layout>
-            <Typography variant="h4" className={classes.center}>About</Typography>
             <Paper className={classes.paperContainer}>
                 <Typography variant="h5">About this site</Typography>
                 <Divider className={classes.divider} />
