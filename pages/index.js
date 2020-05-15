@@ -3,8 +3,9 @@ import Layout from '../components/Layout';
 export default function Index() {
     return (
         <Layout>
-            <p>Under preparation</p>
-            <p>Please go to about page</p>
+            <div>
+                <img src="/image/todo-logo.png" width="100px" />
+            </div>
         </Layout>
     );
 }
