@@ -1,11 +1,28 @@
 import Layout from '../components/Layout';
+import { sharedStyle } from '../utils/constant';
 
-export default function Index() {
+import Link from 'next/link';
+import { Paper, Typography } from '@material-ui/core';
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles(() =>
+    createStyles(sharedStyle)
+);
+
+export default function Index(props) {
+    const classes = useStyles(props);
+
     return (
         <Layout>
-            <div>
-                <img src="/image/todo-logo.png" width="100px" />
-            </div>
+            <Typography variant="h4">Personal projects</Typography>
+            <Paper className={classes.paperTile}>
+                <div>
+                    <Link href="/products/todo/">
+                        <img src="/image/todo-logo.png" width="100%" />
+                    </Link>
+                </div>
+            </Paper>
         </Layout>
     );
 }

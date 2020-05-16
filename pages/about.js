@@ -1,21 +1,17 @@
 import Layout from '../components/Layout';
-import { urlGithubReidha, urlGithubNextSite, urlNoteKkd } from '../utils/constant';
+import { urlGithubReidha, urlGithubNextSite, urlNoteKkd, sharedStyle } from '../utils/constant';
 
 import { Paper, Typography, Divider } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() =>
     createStyles({
-        paperContainer: {
-            margin: '10px 5px 30px 5px',
-            padding: '5px 10px 10px 10px'
-        },
-        divider: {
-            margin: '5px 0px 5px 0px'
-        },
-        logoLink: {
-            verticalAlign: 'middle',
-            marginLeft: '10px'
+        ...sharedStyle,
+        ...{
+            logoLink: {
+                verticalAlign: 'middle',
+                marginLeft: '10px'
+            }
         }
     })
 );
@@ -29,8 +25,8 @@ export default function About(props) {
                 <Typography variant="h5">About this site</Typography>
                 <Divider className={classes.divider} />
                 <Typography variant="body1" component="div">
-                    This site is made by React + Next.js and showcases my personal projects.
-                    Github repository of this site is <a href={urlGithubNextSite}>here</a>.
+                    <p>This site is made by React + Next.js and showcases my personal projects.
+                    Github repository of this site is <a href={urlGithubNextSite}>here</a>.</p>
                 </Typography>
             </Paper>
             <Paper className={classes.paperContainer}>
