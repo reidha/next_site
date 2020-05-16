@@ -1,4 +1,3 @@
-import Head from './Header';
 import { BodyTop } from './BodyCommon';
 import ResponsiveDrawer from './ResponsiveDrawer';
 import Footer from './Footer';
@@ -18,7 +17,6 @@ export default class Layout extends React.Component {
     render() {
         return (
             <>
-                <Head />
                 <BodyTop />
                 <ResponsiveDrawer>
                     {this.props.children}
