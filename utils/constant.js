@@ -26,6 +26,11 @@ export const sharedStyle = {
         margin: '5px 0px 5px 0px'
     },
     flex: {
-        display: 'flex'
+        display: 'flex',
+        flexWrap: 'wrap'
+    },
+    logoLink: {
+        verticalAlign: 'middle',
+        marginLeft: '10px'
     }
 }

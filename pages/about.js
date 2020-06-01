@@ -5,15 +5,7 @@ import { Paper, Typography, Divider } from '@material-ui/core';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() =>
-    createStyles({
-        ...sharedStyle,
-        ...{
-            logoLink: {
-                verticalAlign: 'middle',
-                marginLeft: '10px'
-            }
-        }
-    })
+    createStyles(sharedStyle)
 );
 
 export default function About(props) {

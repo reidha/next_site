@@ -19,15 +19,15 @@ export default function Index(props) {
             <div className={classes.flex}>
                 <Paper className={classes.paperTile}>
                     <div>
-                        <Link href="/products/todo/">
-                            <img src="/image/todo-logo.png" width="100%" />
+                        <Link href="/products/srcr/">
+                            <img src="/image/srcr-logo.png" width="100%" />
                         </Link>
                     </div>
                 </Paper>
                 <Paper className={classes.paperTile}>
                     <div>
-                        <Link href="/products/srcr/">
-                            <img src="/image/srcr-logo.png" width="100%" />
+                        <Link href="/products/todo/">
+                            <img src="/image/todo-logo.png" width="100%" />
                         </Link>
                     </div>
                 </Paper>
