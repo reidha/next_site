@@ -101,6 +101,16 @@ export default function ResponsiveDrawer(props) {
             </List>
             <Divider />
             <List>
+                <ListItem>
+                    <ListItemText primary="Chrome extension" />
+                </ListItem>
+                <ResponsiveDrawerListItem
+                    href="/products/srcr/"
+                    icon={<img src="/image/srcr-logo.png" alt="srcr logo" height="24" />}
+                    text="SRC Replacer" />
+            </List>
+            <Divider />
+            <List>
                 <ResponsiveDrawerListItem
                     href="/about/"
                     icon={<InfoOutlinedIcon />}
