@@ -28,7 +28,7 @@ export default function About(props) {
                     <ul>
                         <li>Work
                             <ul>
-                                <li>Product Manager with CSO&CSPO in Bangkok, Thailand</li>
+                                <li>Product Manager in Bangkok, Thailand</li>
                             </ul>
                         </li>
                         <li>Study
@@ -43,6 +43,18 @@ export default function About(props) {
                                 <li>Flutter</li>
                                 <li>Java</li>
                                 <li>C++</li>
+                            </ul>
+                        </li>
+                        <li>Certifications
+                            <ul>
+                                <li>
+                                    CSM
+                                    <img src="/image/seal-csm.png" alt="CSM" height="28" className={classes.logoLink} />
+                                </li>
+                                <li>
+                                    CSPO
+                                    <img src="/image/seal-cspo.png" alt="CSPO" height="28" className={classes.logoLink} />
+                                </li>
                             </ul>
                         </li>
                     </ul>
