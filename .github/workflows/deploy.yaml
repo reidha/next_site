@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Set up Node  
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node_version: '12.x'
+          node-version: '14'
 
       - name: Next tasks
         run: |
@@ -26,9 +26,9 @@ jobs:
 
       - name: Prepare key
         env: 
-          AM_SECRET: ${{ secrets.AM_SECRET }}
+          MY_MAC: ${{ secrets.MY_MAC }}
         run: |
-          echo "$AM_SECRET" > ~/deploy_key.pem
+          echo "$MY_MAC" > ~/deploy_key.pem
           chmod 600 ~/deploy_key.pem
 
       - name: Git tasks
